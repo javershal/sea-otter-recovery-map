@@ -278,4 +278,9 @@ html, body {
   #sidebar .note {
     margin-top: 24px;
   }
+
+  /* Push attribution above the scrubber + drawer handle so it doesn't overlap */
+  .maplibregl-ctrl-bottom-right {
+    bottom: calc(var(--scrubber-height) + 44px);
+  }
 }
