@@ -75,21 +75,6 @@ otter-recovery/
 
 No backend. No database. No tile server.
 
-## What I learned building this
-
-*(Filled in as the project progresses.)*
-
-- 
-- 
-- 
-
-## Roadmap
-
-- [ ] v1: scrubbable 1985–2017 timeline with three layers
-- [ ] Light annotations for key years (sea star wasting 2013, ESA threshold crossed 2016)
-- [ ] Phase 2: real-time iNaturalist sightings overlay (last 30 days, multiple species)
-- [ ] Phase 2: Elkhorn Slough zoomed inset showing the slough's own recolonization timeline
-
 ## Credits
 
 - Census data: U.S. Geological Survey, Western Ecological Research Center
