@@ -150,3 +150,10 @@ function stopPlay() {
   playTimer = null;
   document.getElementById('play-btn').textContent = '▶';
 }
+
+// ── Mobile drawer toggle ─────────────────────────────────────────────────────
+document.getElementById('drawer-toggle').addEventListener('click', () => {
+  const sidebar = document.getElementById('sidebar');
+  const isOpen = sidebar.classList.toggle('open');
+  document.getElementById('drawer-toggle').setAttribute('aria-expanded', isOpen);
+});
