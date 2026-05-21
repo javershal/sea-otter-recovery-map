@@ -2,9 +2,9 @@
 Reproject, simplify, and merge all raw shapefiles into three GeoJSON files.
 
 Outputs (all EPSG:4326, all years combined, one feature per segment per year):
-    web/data/census_summary.geojson
-    web/data/range_extent.geojson
-    web/data/extra_limit.geojson
+    docs/data/census_summary.geojson
+    docs/data/range_extent.geojson
+    docs/data/extra_limit.geojson
 
 Every feature has a `year` property (integer) so the MapLibre frontend can
 filter with ["==", ["get", "year"], 1985].
@@ -25,7 +25,7 @@ import geopandas as gpd
 import pandas as pd
 
 RAW_DIR = Path("data/raw")
-OUT_DIR = Path("web/data")
+OUT_DIR = Path("docs/data")
 
 # Simplification tolerance in EPSG:3310 metres.
 # At zoom 10 (~150 m/pixel on screen) this keeps geometry smooth without bloat.

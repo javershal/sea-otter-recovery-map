@@ -42,7 +42,7 @@ uv run scripts/inspect.py
 uv run scripts/preprocess.py
 
 # Serve the frontend
-cd web && python -m http.server 8000
+cd docs && python -m http.server 8000
 ```
 
 Then open <http://localhost:8000>.
@@ -58,7 +58,7 @@ otter-recovery/
 │   ├── download.py       # fetch USGS data
 │   ├── inspect.py        # exploratory data inspection
 │   └── preprocess.py     # reproject, simplify, merge to GeoJSON
-├── web/
+├── docs/
 │   ├── index.html        # the map
 │   ├── style.css
 │   ├── app.js            # MapLibre setup, scrubber, layer filtering

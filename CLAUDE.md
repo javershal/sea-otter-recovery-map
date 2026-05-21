@@ -44,7 +44,7 @@ otter-recovery/
 │   ├── download.py       # fetch USGS data
 │   ├── explore.py        # exploratory — print CRS, columns, samples
 │   └── preprocess.py     # reproject, simplify, merge by year property
-├── web/
+├── docs/
 │   ├── index.html
 │   ├── style.css
 │   ├── app.js
@@ -55,15 +55,15 @@ otter-recovery/
 └── .gitignore
 ```
 
-Two halves: Python pipeline → static frontend. They communicate only through files in `web/data/`. Keep that boundary clean.
+Two halves: Python pipeline → static frontend. They communicate only through files in `docs/data/`. Keep that boundary clean.
 
 ## Data model conventions
 
 Preprocessing produces three GeoJSON files, each with all years combined:
 
-- `web/data/census_summary.geojson`
-- `web/data/range_extent.geojson`
-- `web/data/extra_limit.geojson`
+- `docs/data/census_summary.geojson`
+- `docs/data/range_extent.geojson`
+- `docs/data/extra_limit.geojson`
 
 Every feature has a `year` property (integer, e.g. `1985`). The frontend uses MapLibre filter expressions like `["==", ["get", "year"], 1985]` to swap visibility — no per-year files, no rebuilds.
 
