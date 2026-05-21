@@ -14,11 +14,9 @@ This map shows what happened over the following three decades. Otters pushing no
 
 All data comes from the U.S. Geological Survey's annual California sea otter census, conducted cooperatively with the California Department of Fish and Wildlife, the U.S. Fish and Wildlife Service, and the Monterey Bay Aquarium. Surveys combine shore-based spotting-scope counts with low-altitude aerial counts along roughly 375 miles of California coast.
 
-The map uses three layers per year:
+The map uses one layer per year:
 
-- **Density polygons** — coast segments colored by otters per km² of habitat
-- **Range extent** — the official northern and southern boundaries of the population
-- **Extra-limit observations** — individual otters spotted outside the official range, often males pushing into new territory
+- **Density polygons** — coast segments colored by linear otter density along the coast
 
 Coverage runs 1985–2017. Methodology shifted after 2017 due to COVID, weather, and equipment issues, so subsequent years aren't directly comparable. USGS is developing a new statistical model expected to release in 2026 that will reconcile the full record.
 
