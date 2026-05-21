@@ -22,6 +22,8 @@ Coverage runs 1985–2017. Methodology shifted after 2017 due to COVID, weather,
 
 Source: [USGS California Sea Otter Surveys and Research](https://www.usgs.gov/centers/werc/science/california-sea-otter-surveys-and-research)
 
+note: at the time of the build the links for the 1985-2024 data were broken. This data was retreived via the Internet Archive
+
 ## Running locally
 
 You need Python 3.11+ and [uv](https://docs.astral.sh/uv/) for the preprocessing pipeline, plus any modern browser for the frontend.
