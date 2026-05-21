@@ -135,7 +135,7 @@ document.getElementById('play-btn').addEventListener('click', () => {
 function startPlay() {
   // If we're at the end, rewind to start before playing
   if (currentIdx >= LAST_IDX) updateYear(0);
-  document.getElementById('play-btn').textContent = '⏸';
+  document.getElementById('play-btn').textContent = '❚❚';
   playTimer = setInterval(() => {
     if (currentIdx >= LAST_IDX) {
       stopPlay();
