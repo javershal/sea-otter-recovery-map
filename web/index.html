@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacific Sea Otter Population Density</title>
+  <link href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="layout">
+
+    <!-- Left column: map + scrubber -->
+    <div id="map-col">
+      <div id="map"></div>
+      <div id="scrubber">
+        <button id="play-btn" aria-label="Play">▶</button>
+        <span id="year-label">1985</span>
+        <input id="year-slider" type="range" min="0" max="31" step="1" value="0">
+        <span id="year-end-label">2017</span>
+      </div>
+    </div>
+
+    <!-- Right column: info panel -->
+    <aside id="sidebar">
+      <h1>Pacific Sea Otter Population Density</h1>
+      <p class="subtitle">California Coast · 1985–2017</p>
+
+      <div class="stat-block">
+        <span class="stat-label">Year</span>
+        <span class="stat-value" id="panel-year">1985</span>
+      </div>
+
+      <div class="stat-block">
+        <span class="stat-label">Peak density</span>
+        <span class="stat-value" id="panel-peak">—</span>
+        <span class="stat-unit">otters / mi of coast</span>
+      </div>
+
+      <div class="stat-block">
+        <span class="stat-label">Avg density</span>
+        <span class="stat-value" id="panel-avg">—</span>
+        <span class="stat-unit">otters / mi of coast</span>
+      </div>
+
+      <p class="note">Source: USGS Annual Sea Otter Census</p>
+    </aside>
+
+  </div>
+
+  <script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

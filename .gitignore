@@ -1,0 +1,8 @@
+data/raw/
+1985-2014 zips/
+__pycache__/
+.venv/
+*.pyc
+*.tmp
+*.egg-info/
+.ruff_cache/

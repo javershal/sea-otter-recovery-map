@@ -1,0 +1,224 @@
+:root {
+  --color-bg: #04141f;
+  --color-sidebar: #061926;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #ddf0ee;
+  --color-text-muted: #5a8f9f;
+  --color-accent: #00c8b4;
+  --scrubber-height: 68px;
+  --font: system-ui, -apple-system, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+  font-family: var(--font);
+  color: var(--color-text);
+}
+
+/* ── Two-column layout ─────────────────────────────────────── */
+#layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ── Map column ────────────────────────────────────────────── */
+#map-col {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* prevent flex blowout */
+}
+
+#map {
+  flex: 1;
+}
+
+/* ── Scrubber bar ──────────────────────────────────────────── */
+#scrubber {
+  flex-shrink: 0;
+  height: var(--scrubber-height);
+  background: #0d1b2a;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+#play-btn {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-accent);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+#play-btn:hover {
+  background: rgba(0, 200, 180, 0.15);
+}
+
+#year-label, #year-end-label {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  min-width: 32px;
+}
+
+#year-end-label {
+  color: var(--color-text-muted);
+}
+
+#year-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-border);
+  outline: none;
+  cursor: pointer;
+}
+
+#year-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid var(--color-bg);
+}
+
+#year-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid var(--color-bg);
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+#sidebar {
+  flex: 2;
+  min-width: 0;
+  background: var(--color-sidebar);
+  border-left: 1px solid var(--color-border);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-y: auto;
+}
+
+#sidebar h1 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+#sidebar .subtitle {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 56px;
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.stat-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.stat-value {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.stat-unit {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+#sidebar .note {
+  margin-top: auto;
+  padding-top: 32px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  line-height: 1.5;
+}
+
+/* ── MapLibre popup ────────────────────────────────────────── */
+.maplibregl-popup-content {
+  color: #0d2535;
+  font-family: var(--font);
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+/* ── Responsive: stack on narrow screens ───────────────────── */
+@media (max-width: 700px) {
+  html, body {
+    overflow: auto;
+  }
+
+  #layout {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  #map-col {
+    height: 60vh;
+  }
+
+  #sidebar {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    padding: 24px 20px;
+  }
+
+  #sidebar .note {
+    margin-top: 24px;
+  }
+}

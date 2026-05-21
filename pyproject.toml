@@ -1,0 +1,16 @@
+[project]
+name = "otter-bay"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "geopandas>=0.14",
+    "shapely>=2.0",
+    "pyogrio>=0.7",
+    "requests>=2.31",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
