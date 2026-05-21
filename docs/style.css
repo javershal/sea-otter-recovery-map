@@ -279,8 +279,9 @@ html, body {
     margin-top: 24px;
   }
 
-  /* Push attribution above the scrubber + drawer handle so it doesn't overlap */
+  /* Move attribution to top-right on mobile so it doesn't crowd the bottom controls */
   .maplibregl-ctrl-bottom-right {
-    bottom: calc(var(--scrubber-height) + 44px);
+    bottom: auto;
+    top: 0;
   }
 }
